@@ -1,3 +1,10 @@
+/* the original board
+ O |   | X
+ ---------
+ X |   | X
+ ---------
+   | O | O
+ */
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
