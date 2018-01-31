@@ -5,6 +5,14 @@
  ---------
    | O | O
  */
+
+/*
+ 1 | 2 | 3
+ ---------
+ 4 | 5 | 6
+ ---------
+ 7 | 8 | 9
+*/
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -34,4 +42,22 @@ int main(void) {
   
    nextMove(player,board);
     return 0;
+}
+
+
+function winning(board, player){
+ if (
+ (board[0] == player && board[1] == player && board[2] == player) ||
+ (board[3] == player && board[4] == player && board[5] == player) ||
+ (board[6] == player && board[7] == player && board[8] == player) ||
+ (board[0] == player && board[3] == player && board[6] == player) ||
+ (board[1] == player && board[4] == player && board[7] == player) ||
+ (board[2] == player && board[5] == player && board[8] == player) ||
+ (board[0] == player && board[4] == player && board[8] == player) ||
+ (board[2] == player && board[4] == player && board[6] == player)
+ ) {
+  return true;
+ } else {
+  return false;
+ }
 }
